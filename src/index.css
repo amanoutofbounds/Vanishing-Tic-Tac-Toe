@@ -1,0 +1,80 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 240 10% 5%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 10% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 10% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 252 80% 75%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 20%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 240 5% 20%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 5% 20%;
+    --input: 240 5% 20%;
+    --ring: 252 80% 75%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-[Poppins];
+  }
+}
+
+@layer components {
+  .board-cell {
+    @apply w-20 h-20 md:w-24 md:h-24 flex items-center justify-center text-4xl md:text-5xl font-bold border-2 border-[#403E43] bg-[#1A1F2C] cursor-pointer transition-all duration-300;
+  }
+
+  .board-cell:hover {
+    @apply bg-gray-800;
+  }
+
+  .board-cell-x {
+    @apply text-[#9b87f5];
+  }
+
+  .board-cell-o {
+    @apply text-[#F97316];
+  }
+
+  .fading {
+    @apply opacity-60;
+  }
+}
